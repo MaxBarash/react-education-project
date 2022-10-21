@@ -1,0 +1,349 @@
+/* стили страницы Home and Login формы */
+.login-form,
+.giphy-form,
+.curr-form,
+.clock {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100vh;
+   /* font-family: sans-serif; */
+   font-family: Kharkiv Tone;
+   background: linear-gradient(#141e309d, #243b55);
+}
+
+.clock-box {
+   position: absolute;
+   margin: 100px;
+   width: 400px;
+   height: 200px;
+   background: rgba(0, 0, 0, .5);
+   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+   border-radius: 10px;
+}
+
+.curr-box {
+   position: absolute;
+   width: 400px;
+   padding: 40px;
+   background: rgba(0, 0, 0, .5);
+   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+   border-radius: 10px;
+}
+
+.login-box {
+   position: absolute;
+   width: 400px;
+   padding: 40px;
+   background: rgba(0, 0, 0, .5);
+   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+   border-radius: 10px;
+}
+
+.login-box h2,
+.curr-box h2 {
+   text-transform: uppercase;
+   font-weight: 500;
+   letter-spacing: 5px;
+   margin: 0 0 30px;
+   padding: 0;
+   color: var(--activeProp);
+   text-align: center;
+}
+
+.login-box,
+.user-box,
+.search-box {
+   position: relative;
+}
+
+.rates input {
+   margin: 5px;
+   width: 200px;
+   padding: 5px;
+   font-size: 15px;
+   color: white;
+   padding: 10px;
+   border: 2px solid var(--activeProp);
+   border-radius: 5px;
+   background: transparent;
+}
+
+.rates select {
+   margin: 5px;
+   width: 75px;
+   font-size: 15px;
+   color: white;
+   padding: 10px 5px;
+   border: 2px solid var(--activeProp);
+   border-radius: 5px;
+   background: transparent;
+}
+
+.login-box .user-box input {
+   text-align: center;
+   width: 100%;
+   padding: 10px 0;
+   font-size: 16px;
+   color: white;
+   margin-bottom: 30px;
+   border: 1px solid var(--activeProp);
+   background: transparent;
+}
+
+.login-box .user-box label {
+   position: absolute;
+   font-size: 14px;
+   top: 0;
+   left: 0;
+   padding: 15px 0 0 10px;
+   color: rgba(255, 255, 255, 0.41);
+   pointer-events: none;
+   transition: all .5s ease-in-out;
+   opacity: 0;
+}
+
+.login-box .user-box input:focus+label {
+   top: -27px;
+   left: 0;
+   color: var(--activeProp);
+   font-size: 10px;
+   opacity: 1;
+}
+
+.emailError {
+   position: absolute;
+   margin-top: 15px;
+   margin-left: 35px;
+   font-size: 13px;
+   color: var(--errorProp);
+   opacity: 0;
+}
+
+.emailError:hover {
+   animation: inText 3s forwards;
+   opacity: 1;
+}
+
+@keyframes inText {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+/* style button */
+.submit-btn {
+   font-weight: 1000;
+   font-size: 16px;
+   letter-spacing: 7px;
+   text-transform: uppercase;
+
+   display: inline-block;
+   margin-top: 40px;
+   padding: 10px 30px;
+
+   color: var(--activeProp);
+   transition: .75s;
+   border: none;
+   background: none;
+   overflow: hidden;
+}
+
+.login-box .submit-btn:hover {
+   background: var(--activeProp);
+   color: white;
+   border-radius: 5px;
+   box-shadow:
+      0 0 5px var(--activeProp),
+      0 0 25px var(--activeProp),
+      0 0 50px var(--activeProp),
+      0 0 100px var(--activeProp);
+}
+
+/* style button */
+
+.login-box form a {
+   font-family: Kharkiv Tone;
+   position: relative;
+   display: inline-block;
+   padding: 10px 20px;
+   color: var(--activeProp);
+   background: none;
+   font-size: 16px;
+   text-decoration: none;
+   text-transform: uppercase;
+   overflow: hidden;
+   transition: .5s;
+   margin-top: 40px;
+   letter-spacing: 4px;
+}
+
+.login-box a:hover {
+   background: var(--activeProp);
+   color: rgb(255, 255, 255);
+   border-radius: 5px;
+   box-shadow:
+      0 0 5px var(--activeProp),
+      0 0 25px #03e9f4,
+      0 0 50px #03e9f4,
+      0 0 100px #03e9f4;
+}
+
+.login-box a span {
+   position: absolute;
+   display: block;
+}
+
+.login-box a span:nth-child(1) {
+   top: 0;
+   left: -100px;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(90deg, transparent, var(--activeProp));
+   animation: btn-anim1 1.5s linear infinite;
+   animation-delay: 1s;
+}
+
+@keyframes btn-anim1 {
+   0% {
+      left: -100%;
+   }
+
+   50%,
+   100% {
+      left: 100%;
+   }
+}
+
+.login-box a span:nth-child(2) {
+   top: -100%;
+   right: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(180deg, transparent, var(--activeProp));
+   animation: btn-anim2 1.5s linear infinite;
+   animation-delay: .25s;
+}
+
+@keyframes btn-anim2 {
+   0% {
+      top: -100%;
+   }
+
+   50%,
+   100% {
+      top: 100%;
+   }
+}
+
+.login-box a span:nth-child(3) {
+   bottom: 0;
+   right: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(270deg, transparent, var(--activeProp));
+   animation: btn-anim3 1.5s linear infinite;
+   animation-delay: .5s;
+}
+
+@keyframes btn-anim3 {
+   0% {
+      right: -100%;
+   }
+
+   50%,
+   100% {
+      right: 100%;
+   }
+}
+
+.login-box a span:nth-child(4) {
+   bottom: -100%;
+   left: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(360deg, transparent, var(--activeProp));
+   animation: btn-anim4 1.5s linear infinite;
+   animation-delay: .75s;
+}
+
+@keyframes btn-anim4 {
+   0% {
+      buttom: -100%;
+   }
+
+   50%,
+   100% {
+      bottom: 100%;
+   }
+}
+
+
+/* Giphy style */
+
+.giphy-box {
+   position: absolute;
+   width: 700px;
+   padding: 40px;
+
+   background: rgba(0, 0, 0, .5);
+   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+   border-radius: 10px;
+}
+
+.giphy-box h2 {
+   /* font-family: Misto; */
+   text-transform: uppercase;
+   letter-spacing: 6px;
+
+   margin: 0 0 30px;
+   padding: 0;
+   color: var(--activeProp);
+   text-align: center;
+}
+
+.search-box {
+   display: flex;
+   justify-content: center;
+   margin-top: 30px;
+}
+
+
+.search-box input {
+   margin: 5px;
+   width: 200px;
+   padding: 5px;
+   font-size: 15px;
+   color: white;
+   padding: 10px;
+   color: rgba(255, 255, 255, 0.442);
+   border: 2px solid var(--activeProp);
+   border-radius: 5px;
+   background: transparent;
+}
+
+.search-box button {
+   margin: 5px;
+   /* font-family: Kharkiv Tone; */
+   font-size: 13px;
+   font-weight: bolder;
+   text-transform: uppercase;
+   letter-spacing: 8px;
+
+   width: 150px;
+
+   border-radius: 5px;
+   color: var(--activeProp);
+   border: 2px solid var(--activeProp);
+   background: none;
+}
+
+/* clock style */

@@ -1,0 +1,34 @@
+/* castom fonts
+@font-face {
+   font-family: Misto;
+   src: url('../fonts/Misto.ttf');
+   font-weight: 700;
+}
+
+@font-face {
+   font-family: Kharkiv Tone;
+   src: url('../fonts/KharkivTone.ttf');
+   font-weight: 500;
+} */
+
+/* castom fonts */
+
+body {
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   
+   /* font-family: Kharkiv Tone; */
+   margin: 0 auto;
+   background: linear-gradient(#141e309d, #243b55);
+   width: 100%;
+   height: 100vh;
+}
+
+
+code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}

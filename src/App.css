@@ -1,0 +1,38 @@
+:root {
+   --activeProp: #03e9f4;
+   --errorProp: #F97D7D;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.App {
+   text-align: center;
+}
+
+.Header {
+   min-height: 50px;
+   font-size: 20px;
+
+   display: flex;
+   align-items: center;
+   /* justify-content: space-between; */
+   justify-content: center;
+
+   padding: 10px 20px;
+   padding-right: auto;
+   background: rgba(0, 0, 0, 5);
+   box-shadow: 0px 10px 20px rgba(0, 0, 0, 5);
+   border-radius: 0 0 10px 10px;
+}
+
+a {
+   color: #6e7ee1;
+   text-decoration: none;
+}
+
+
+.active-link {
+   color: var(--activeProp);
+}
